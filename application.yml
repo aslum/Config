@@ -5,27 +5,45 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 
+spring:
+    sleuth:
+        sampler:
+            percentage: 1.0  
+    zipkin:
+        baseUrl: http://localhost:8085
+
 ---
 spring:
+  application:
+        name: subject
   profiles: subject
 words: I,You,He,She,It
   
 ---
 spring:
+  application:
+        name: verb
   profiles: verb
 words: ran,knew,had,saw,bought
 
 ---
 spring:
+  application:
+        name: article
   profiles: article
 words: a,the
 
 ---
 spring:
+  application:
+        name: adjective
   profiles: adjective
 words: reasonable,leaky,suspicious,ordinary,unlikely
 
 ---
 spring:
+  application:
+        name: noun
   profiles: noun
 words: boat,book,vote,seat,backpack,partition,groundhog
+  
