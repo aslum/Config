@@ -17,7 +17,7 @@ spring:
   application:
         name: subject
   profiles: subject
-words: I,You,He,She,It
+words: Ii,Yyou,Hhe,Sshe,Iit
   
 ---
 spring:
